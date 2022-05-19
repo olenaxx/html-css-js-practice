@@ -16,6 +16,7 @@
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   --heading-color: hsl(var(--hue-1), 61%, 24%);
   --text-color: hsl(var(--hue-1), 17%, 63%);
+  --section-padding: 7rem;
 }
 
 /* ----------- General Styles ------------ */
@@ -57,6 +58,11 @@ ul {
   margin: 0 auto;
 }
 
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+
 .logo {
   margin-right: 1.5rem;
   font-family: "Abril Fatface", cursive;
@@ -70,5 +76,26 @@ ul {
   color: var(--main-color-1);
 }
 
+.text {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  line-height: 2.3;
+}
+
+.triangle {
+  width: 95px;
+  opacity: 0.18;
+}
+
+.dots {
+  width: 112px;
+}
+
+.square {
+  width: 70px;
+}
+
 /* ----------- Navbar Styling ------------ */
 /* ----------- Showcase Area Styling ------------ */
+/* ----------- About Section Styling ------------ */
