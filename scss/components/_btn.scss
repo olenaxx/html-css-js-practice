@@ -26,6 +26,7 @@
   border-bottom: 2.5px solid var(--main-color-2);
   border-radius: 0;
   padding: 0.15rem 0;
+  min-width: revert;
 }
 
 .btn.secondary-btn::before {
