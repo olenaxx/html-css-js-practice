@@ -12,9 +12,7 @@ const zoom_icons = document.querySelectorAll(".zoom-icon");
 const modal_overlay = document.querySelector(".modal-overlay");
 const images = document.querySelectorAll(".images img");
 const prev_btn = document.querySelector(".prev-btn");
-console.log(prev_btn);
 const next_btn = document.querySelector(".next-btn");
-console.log(next_btn);
 
 window.addEventListener('scroll', () => {
   if (!skillsPlayed) skillsCounter();
@@ -35,7 +33,8 @@ function updateCount(num, maxNum) {
 /* ------------------ Sticky Navbar -------------------- */
 
 function stickyNavbar() {
-  header.classList.toggle('scrolled', window.pageYOffset > 0);
+ header.classList.toggle('scrolled', window.pageYOffset > 0);
+  
 }
 
 stickyNavbar();
@@ -123,35 +122,52 @@ zoom_icons.forEach((icn, i) => icn.addEventListener("click", () => {
   changeImage(currentIndex);
 }));
 
-modal_overlay.addEventListener("click", () => {
-  prt_section.classList.remove("open");
-  document.body.classList.remove("stopScrolling");
+modal_overlay.addEventListener("click", (e) => {
+  const checkClasslist = e.target.classList.contains("modal-overlay");
+  if (checkClasslist) {
+    
+    prt_section.classList.remove("open");
+    document.body.classList.remove("stopScrolling");
+  }
 });
 
-// prev_btn.addEventListener("click", () => {
-//   console.log('hello');
-//   if (currentIndex === 0) {
-//     currentIndex = 5;
-//   } else {
-//     currentIndex--;
-//   }
+prev_btn.addEventListener("click", () => {
   
-//   console.log(currentIndex);
-//   changeImage(currentIndex)
-// });
+  if (currentIndex === 0) {
+    currentIndex = 5;
+  } else {
+    currentIndex--;
+  }
+  
+  changeImage(currentIndex)
+});
 
-// next_btn.addEventListener("click", () => {
-//   if (currentIndex === 5) {
-//     currentIndex = 0;
-//   } else {
-//     currentIndex++;
-//   }
-//   console.log('hi');
-//   console.log(currentIndex);
-//     changeImage(currentIndex)
-//   })
+next_btn.addEventListener("click", () => {
+  if (currentIndex === 6) {
+    currentIndex = 0;
+  } else {
+    currentIndex++;
+  }
+ 
+    changeImage(currentIndex)
+  })
   
-  function changeImage(index) {
+function changeImage(index) {
+    console.log('index',index);
     images.forEach(img => img.classList.remove("showImage"));
   images[index].classList.add("showImage");
 }
+
+
+/* ------------------ Modal Pop Up Animation -------------------- */
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  speed: 500,
+  autoplay: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
