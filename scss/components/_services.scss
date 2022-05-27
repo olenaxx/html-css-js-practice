@@ -13,11 +13,13 @@
   align-items: center;
   text-align: center;
   justify-items: start;
+  transition: 0.3s color;
 }
 
 .milestones h2 {
   color: var(--main-color-1);
   font-size: 1.3rem;
+  transition: 0.3s color;
 }
 
 .milestones h2 span {
@@ -31,6 +33,7 @@
   line-height: 0.9;
   font-weight: 500;
   font-size: 0.95rem;
+  transition: 0.3s color;
 }
 
 .services-grid {
@@ -50,12 +53,14 @@
   align-items: start;
   justify-content: space-between;
   min-height: 180px;
+  transition: 0.3s background-color;
 }
 
 .srv-card h3 {
   color: var(--heading-color);
   font-weight: 500;
   font-size: 1.05rem;
+  transition: 0.3s color;
 }
 
 .srv-card .text {

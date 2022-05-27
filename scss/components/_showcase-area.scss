@@ -11,27 +11,8 @@
   display: grid;
   grid-template-columns: 1fr 550px;
   height: calc(100vh - 120px);
-  max-height: 600px;
+  height: 600px;
   align-items: center;
-}
-
-.sub-heading {
-  color: var(--heading-color);
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  border-left: 3px solid var(--main-color-2);
-  padding: 0.13rem 0.75rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.heading {
-  color: var(--heading-color);
-  font-size: 3rem;
-  font-family: "Abril Fatface", cursive;
-  font-weight: 400;
-  line-height: 1.3;
 }
 
 .showcase-area .sub-heading {

@@ -31,9 +31,14 @@ header.scrolled .logo {
   line-height: 80px;
 }
 
+// header {
+//   background-color: var(--bg-color-2);
+// }
+
 .links {
   flex: 1;
   display: flex;
+  // display: none;
   justify-content: space-between;
 }
 

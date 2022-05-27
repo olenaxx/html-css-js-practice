@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.5s transform;
+  transition: 0.5s transform, 0.3s background-color;
 }
 
 .about-card:nth-child(1) {
@@ -57,10 +57,12 @@
 
 .st0 {
   fill: var(--bg-color-3);
+  transition: 0.3s fill;
 }
 
 .st1 {
   fill: #c5e3ea;
+  transition: 0.3s fill;
 }
 
 .st2 {
@@ -74,6 +76,7 @@
   font-size: 1rem;
   margin-top: 1rem;
   letter-spacing: 0.3px;
+  transition: 0.3s color;
 }
 
 .about-card:hover {
